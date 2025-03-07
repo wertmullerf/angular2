@@ -1,0 +1,9 @@
+<h1>Contador</h1>
+<p>{{ counterValue }}</p>
+
+<button class="btn btn-primary me-2" (click)="increaseBy(1)">+1</button>
+<button class="btn btn-primary me-2" (click)="increaseBy(-1)">-1</button>
+<button class="btn btn-primary" (click)="resetCounter()">Reset</button>
+
+<h1>Contador Signal</h1>
+<p>{{ counterSignal() }}</p>

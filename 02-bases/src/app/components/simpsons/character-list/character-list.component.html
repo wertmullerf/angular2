@@ -1,0 +1,16 @@
+<h3>{{ listName() }}</h3>
+<ol>
+  @for (character of characters(); track character.id) {
+  <li>
+    <span>{{ character.name }}</span>
+    <span
+      [ngClass]="{
+        'text-success': character!.age <= 40,
+        'text-danger': character!.age > 40
+      }"
+    >
+      - {{ character.age }}</span
+    >
+  </li>
+  }
+</ol>

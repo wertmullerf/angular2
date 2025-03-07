@@ -1,0 +1,33 @@
+<h1>Simpsons</h1>
+<hr />
+<section>
+  <div class="col-12 col-sm-6">
+    <h3>Agregar PJ</h3>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Nombre"
+      [value]="name()"
+      (change)="name.set(nameInput.value)"
+      #nameInput
+    />
+    <input
+      type="number"
+      class="form-control mt-2"
+      [value]="age()"
+      placeholder="Edad"
+      (change)="age.set(ageInput.valueAsNumber)"
+      #ageInput
+    />
+    <button class="btn btn-primary mt-2" (click)="addCharacter()">
+      Agregar
+    </button>
+  </div>
+
+  <div class="col-12 col-sm-6 mt-4">
+    <app-character-list
+      listName="Listado de Personajes"
+      [characters]="characters()"
+    />
+  </div>
+</section>
